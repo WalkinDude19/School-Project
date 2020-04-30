@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="scr_Modify_Part" prefHeight="443.0" prefWidth="425.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ApplicationViews.Modify_Part_Controller">   
+    <children>
+        <Label fx:id="lbl_Modify_Part_Screen" layoutX="14.0" layoutY="15.0" text="Modify Part">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <RadioButton fx:id="radio_Modify_Part_Inhouse" layoutX="136.0" layoutY="19.0" mnemonicParsing="false" onAction="#get_Part_Source" text="In-House">
+            <toggleGroup>
+                <ToggleGroup fx:id="tgl_Internal_External" />
+            </toggleGroup>
+        </RadioButton>
+        <RadioButton fx:id="radio_Modify_Part_Outsourced" layoutX="239.0" layoutY="19.0" mnemonicParsing="false" onAction="#get_Part_Source" text="Outsourced" toggleGroup="$tgl_Internal_External" />
+        <Label fx:id="lbl_Modify_Part_ID" layoutX="35.0" layoutY="67.0" text="ID">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="lbl_Modify_Part_ID_Number" alignment="CENTER" contentDisplay="CENTER" layoutX="140.0" layoutY="57.0" prefHeight="40.0" prefWidth="150.0" style="-fx-border-width: 1; -fx-border-color: black; -fx-border-style: solid; -fx-padding: 5;">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="lbl_Modify_Part_Name" layoutX="35.0" layoutY="122.0" text="Name">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txt_Modify_Part_Name" layoutX="140.0" layoutY="112.0" prefHeight="40.0" prefWidth="150.0">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </TextField>
+        <Label fx:id="lbl_Modify_Part_Inventory" layoutX="35.0" layoutY="177.0" text="Inv">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txt_Modify_Part_Inventory" layoutX="140.0" layoutY="167.0" prefHeight="40.0" prefWidth="150.0">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </TextField>
+        <Label fx:id="lbl_Modify_Part_Price" layoutX="35.0" layoutY="232.0" text="Price/Cost">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txt_Modify_Part_Price" layoutX="140.0" layoutY="222.0" prefHeight="40.0" prefWidth="150.0">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </TextField>
+        <Label fx:id="lbl_Modify_Part_Min" layoutX="35.0" layoutY="287.0" text="Min">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txt_Modify_Part_Min" layoutX="140.0" layoutY="277.0" prefHeight="40.0" prefWidth="100.0">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </TextField>
+        <Label fx:id="lbl_Modify_Part_Max" layoutX="257.0" layoutY="287.0" text="Max">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txt_Modify_Part_Max" layoutX="300.0" layoutY="277.0" prefHeight="40.0" prefWidth="100.0">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </TextField>
+        <Label fx:id="lbl_Modify_Part_Dyn" layoutX="35.0" layoutY="339.0" text="Company Name">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txt_Modify_Part_Dyn" layoutX="140.0" layoutY="332.0" prefHeight="40.0" prefWidth="150.0">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </TextField>
+        <Button fx:id="btn_Modify_Part_Save" layoutX="260.0" layoutY="402.0" mnemonicParsing="false" onAction="#handle_Modify_Parts_Save" prefHeight="25.0" prefWidth="60.0" text="Save" />
+        <Button fx:id="btn_Modify_Part_Cancel" layoutX="340.0" layoutY="402.0" mnemonicParsing="false" onAction="#handle_Modify_Parts_Cancel" prefHeight="25.0" prefWidth="60.0" text="Cancel" />
+    </children>
+</AnchorPane>
